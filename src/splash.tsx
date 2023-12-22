@@ -1,6 +1,7 @@
 import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 import { useNavigation } from '@react-navigation/native'
+import { FontAwesome5 } from '@expo/vector-icons'; 
 
 const Splash = () => {
     const navigation=useNavigation();
@@ -12,24 +13,30 @@ const Splash = () => {
     },3000);
 },[])
   return (
+   <View style={{
+    flex:1,
+    
+    backgroundColor:"#ff6cb6"
+   }}>
     <View style={{
-        flex:1,
-        backgroundColor:"#3e7b7b",
-justifyContent:"center",
-
-    }}>
-     
+      flex:1,
+    justifyContent:"center",
+    alignSelf:"center",
+    alignContent:"center",
+    alignItems:"center",
+    
+   }}>
       
       
       <Text style={{
-        fontSize:40,
+justifyContent:"center",
+        fontSize:30,
         fontWeight:"bold",
-        justifyContent:"center",
-        alignSelf:"center",
-        alignContent:"center",
-      }}>splash</Text>
+       
+        
+      }}>SPLASH</Text>
       </View>
-    
+    </View>
   )
 }
 

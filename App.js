@@ -5,12 +5,13 @@ import { StyleSheet, Text, View } from 'react-native';
 import React from "react";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import login from "./src/login";
-import registration from "./src/registration";
-import Splash from "./src/splash";
 
+import Splash from "./src/splash";
+import Login from './src/login';
+import Home from "./src/home";
 
 const StackN = createNativeStackNavigator();
+
 
 const App = () => {
   return (
@@ -30,14 +31,11 @@ const App = () => {
         }}
         initialRouteName="Splash"
       >
-      <StackN.Screen name="Splash"
-      component={Splash}/>
-        <StackN.Screen
-          name="login"
-          component={login}
-          options={{ title: "My home" }}
-        />
-        <StackN.Screen name="registration" component={registration} />
+      <StackN.Screen name="Splash" component={Splash}/>
+     
+       <StackN.Screen name="login" component= {Login}/>
+       <StackN.Screen name="home" component= {Home}/>
+        
       </StackN.Navigator>
     </NavigationContainer>
   );
